@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #131314;
+}
+
+.heading-top {
+    
+    margin-top: -10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #23c4f593 10%, #dcb0ff 30%, #ff758c 60%, #ff7eb3 100%,#23c4f593 1%);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 50%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+.semester-name img:nth-child(2) {
+    padding-bottom: 6px;
+    font-size: 200px;
+}
+
+h1,
+h2,
+h3 {
+    color: #ffffffe4;
+}
+
+.course {
+    background-color: #1E1F20;
+    padding: 35px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: rgb(239, 239, 239);
+    
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-left: -10px;
+}
+
+.course-header h2 {
+    font-family: exo;
+    color: #bbbfbe96;
+    font-weight: bolder;
+}
+
+.unit {
+    margin: 10px 0;
+}
+
+.unit h3 {
+    margin: 10px 0 5px;
+    padding-bottom: 20px;
+    
+}
+
+.unit ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.unit ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c8ccd4;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.check:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(34, 50, 84, 0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.check:hover:before {
+    opacity: 1;
+}
+
+.check svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #00ff00;
+    stroke-width: 1.5;
+    transition: all 0.2s ease;
+}
+
+.check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+
+input[type="checkbox"]:checked+.check {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+input[type="checkbox"]:checked+.check svg {
+    stroke: #00ff00;
+    display: block;
+}
+
+input[type="checkbox"]:checked+.check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+
+input[type="checkbox"]:checked+.check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+.checkbox-label {
+    padding-left: 15px;
+    padding-bottom: 6px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
