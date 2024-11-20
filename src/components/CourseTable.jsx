@@ -63,7 +63,7 @@ const CourseTable = ({ courses }) => {
               <td>{course.title}</td>
               <td>{course.totalUnits}</td>
               <td>{course.completedUnits}</td>
-              <td>{course.percentage.toFixed(2)}%</td>
+              <td>{course.percentage.toFixed(0)}%</td>
               <td>{course.status}</td>
             </tr>
           ))}
