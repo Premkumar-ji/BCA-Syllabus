@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header.jsx';
 import Course from './components/Course.jsx';
+import CourseTable from './components/CourseTable.jsx';
 import '../public/Style.css';
 
 function App() {
@@ -442,6 +443,8 @@ function App() {
       {courses.map((course, index) => (
         <Course key={index} course={course} />
       ))}
+      <CourseTable courses={courses} />  {/* Add CourseTable */}
+ 
     </div>
   );
 }
