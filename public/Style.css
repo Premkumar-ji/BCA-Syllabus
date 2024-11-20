@@ -216,3 +216,18 @@ input[type="checkbox"]:checked+.check svg polyline {
 #course-table{
     display: none;
 }
+
+
+@media(max-width: 1550px) {
+    .token-badge{
+        display: none;
+    }
+}
+@media(max-width: 1050px) {
+
+    .course-header p{
+        font-size: 8px;
+        display: none;
+    }
+    
+}
