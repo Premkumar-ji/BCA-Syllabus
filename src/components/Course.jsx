@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Unit from './Unit';
+import React, { useState, useEffect } from "react";
+import Unit from "./Unit";
 
 const Course = ({ course }) => {
   const [checkedTopics, setCheckedTopics] = useState(new Set());
@@ -12,7 +12,7 @@ const Course = ({ course }) => {
     course.units.forEach((unit) => {
       unit.topics.forEach((_, index) => {
         const saved = localStorage.getItem(`checkboxState_${unit.title}_${index}`);
-        if (saved === 'true') {
+        if (saved === "true") {
           checkedFromStorage.add(`${unit.title}_${index}`);
         }
       });
@@ -67,8 +67,13 @@ const Course = ({ course }) => {
       </div>
 
       <p>Total Units: {course.units.length}</p>
-      <p>Total Completed: {Math.floor((checkedTopics.size / course.units.flatMap((unit) => unit.topics).length) * 100)}%</p>
-      {/* <p>Tokens (Completed Units): {tokens.size}</p> */}
+      <p>
+        Total Completed:{" "}
+        {Math.floor(
+          (checkedTopics.size / course.units.flatMap((unit) => unit.topics).length) * 100
+        )}
+        %
+      </p>
 
       {course.units.map((unit, unitIndex) => (
         <Unit
