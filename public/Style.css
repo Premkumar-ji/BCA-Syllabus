@@ -193,7 +193,7 @@ input[type="checkbox"]:checked+.check svg polyline {
 }
 
 /* Semester Buttons */
-.semester-name image:nth-child(2){
+.semester-name img:nth-child(2){
     margin-bottom:5px;
 }
 
