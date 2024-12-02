@@ -363,7 +363,7 @@ function Semester2(){
       <img src="https://fontmeme.com/permalink/240925/76247a096a636766bf876b285c63d322.png" alt="futuristic-fonts" />
         &nbsp; &nbsp; 
         <img src="https://fontmeme.com/permalink/241130/3ac2016bead197201f5844439101b8a5.png" alt="futuristic-fonts" />
-        </div>
+        </div>  
       {courses.map((course, index) => (
         <Course key={index} course={course} />
       ))}
