@@ -272,7 +272,7 @@ input[type="checkbox"]:checked+.check svg polyline {
 
     .logo{
         visibility: visible;
-        top: 10px;
+        top: -15px;
         width: 150px;
     }
     /* Hamburger Menu */
