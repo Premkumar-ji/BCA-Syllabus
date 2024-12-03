@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../public/Style.css";
-import "../public/fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e-removebg-preview.png";
+import "../public/fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e.png";
 import Semester1 from "./components/SemesterFolder/Semester1";
 import Semester2 from "./components/SemesterFolder/Semester2";
 import Semester3 from "./components/SemesterFolder/Semester3";
@@ -58,7 +58,7 @@ const App = () => {
 
       {/* Display Active Semester */}
       <div>{semesterComponents[activeSemester]}</div>
-<img src="../public/fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e-removebg-preview.png" alt="" className="logo"/>
+<img src="fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e.png" alt="" className="logo"/>
     </div>
   
   </>
