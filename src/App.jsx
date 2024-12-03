@@ -29,7 +29,9 @@ const App = () => {
     semester6: <Semester6 />,
   };
 
-  return (
+  return <>
+
+  (
     <div className="App">
       {/* Hamburger Button */}
       <button className="hamburger-menu" onClick={toggleMenu}>
@@ -37,7 +39,7 @@ const App = () => {
       </button>
 
       {/* Semester Buttons */}
-      <div className={`semester-buttons ${menu ? "open" : ""}`}>
+      <span className={`semester-buttons ${menu ? "open" : ""}`}>
         {Object.keys(semesterComponents).map((semester, index) => (
           <button
             key={index}
@@ -47,12 +49,18 @@ const App = () => {
             Semester {index + 1}
           </button>
         ))}
-      </div>
+      </span>
+      <br />
+      <br />
+      <br />
+  
 
       {/* Display Active Semester */}
       <div>{semesterComponents[activeSemester]}</div>
+<img src="public/fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e-removebg-preview.png" alt="" className="logo"/>
     </div>
   );
+  </>
 };
 
 export default App;

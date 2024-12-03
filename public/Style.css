@@ -7,6 +7,13 @@ body {
     background-color: #131314;
 }
 
+.logo{
+    width: 230px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
 /* Gradient Heading Animation */
 .heading-top {
     margin-top: -10px;
@@ -40,6 +47,8 @@ h2,
 h3 {
     color: #ffffffe4;
 }
+
+
 
 /* Course Cards */
 .course {
@@ -200,7 +209,7 @@ input[type="checkbox"]:checked+.check svg polyline {
 }
 
 .semester-buttons button {
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
@@ -228,6 +237,12 @@ input[type="checkbox"]:checked+.check svg polyline {
     color: wheat;
 }
 
+.semester-name img:nth-child(2){
+    margin-bottom:6px;
+}
+
+/* Responsive Adjustments */
+
 @media (max-width: 1550px) {
 
     #downloadExcel{
@@ -235,11 +250,10 @@ input[type="checkbox"]:checked+.check svg polyline {
     }
 }
 
-
-
-
-/* Responsive Adjustments */
 @media (max-width: 1150px) {
+    .logo{
+        visibility: hidden;
+    }
     .token-badge {
         display: none;
     }
@@ -256,6 +270,11 @@ input[type="checkbox"]:checked+.check svg polyline {
 
 @media (max-width: 768px) {
 
+    .logo{
+        visibility: visible;
+        top: 10px;
+        width: 150px;
+    }
     /* Hamburger Menu */
     .hamburger-menu {
         display: block;
@@ -263,6 +282,10 @@ input[type="checkbox"]:checked+.check svg polyline {
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    .heading-top{
+        font-size: 60px;
     }
 
     /* Semester Buttons - Default (Hidden) */
@@ -289,6 +312,10 @@ input[type="checkbox"]:checked+.check svg polyline {
         /* Show buttons */
         animation: slideIn 2s ease forwards;
         /* Trigger the sliding animation */
+    }
+
+    .semester-name img:nth-child(1){
+        width: 320px;
     }
 
     /* Animation Definition */
