@@ -58,7 +58,7 @@ const App = () => {
 
       {/* Display Active Semester */}
       <div>{semesterComponents[activeSemester]}</div>
-<img src="fdf87a89-4c67-4dfc-ae99-3a75d0b7c71e.png" alt="" className="logo"/>
+<img src="image-logo.png.png" alt="" className="logo"/>
     </div>
   
   </>
