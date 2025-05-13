@@ -248,7 +248,8 @@ import CourseTable from '../CourseTable.jsx';
         {
             "title": "UNIT 3: DEVELOPMENT OF MIS",
             "topics": [
-            "Methodology and Tools/Techniques for Systematic Identification, Evaluation and Modification of MIS"
+            "Methodology and Tools/Techniques for Systematic Identification",
+            " Evaluation and Modification of MIS"
             ]
         },
         {
