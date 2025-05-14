@@ -5,11 +5,17 @@ const CourseTable = ({ courses }) => {
   const [completedCourses, setCompletedCourses] = useState([]);
 
   useEffect(() => {
+    // Calculate completion data for each course
     const courseCompletionData = courses.map((course) => {
       const totalUnits = course.units.length;
+
+      // Count units where all topics are marked completed in localStorage
       const completedUnits = course.units.filter((unit) => {
         return unit.topics.every((_, index) => {
-          return localStorage.getItem(`checkboxState_${unit.title}_${index}`) === 'true';
+          // Explicitly check if localStorage key is string 'true'
+          const key = `checkboxState_${unit.title}_${index}`;
+          const value = localStorage.getItem(key);
+          return value === 'true';
         });
       }).length;
 
@@ -17,8 +23,8 @@ const CourseTable = ({ courses }) => {
         title: course.title,
         completedUnits,
         totalUnits,
-        percentage: (completedUnits / totalUnits) * 100,
-        status: completedUnits === totalUnits ? 'Completed' : 'In Progress',
+        percentage: totalUnits > 0 ? (completedUnits / totalUnits) * 100 : 0,
+        status: completedUnits === totalUnits && totalUnits > 0 ? 'Completed' : 'In Progress',
       };
     });
 

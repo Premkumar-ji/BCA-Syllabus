@@ -1,0 +1,47 @@
+
+.question-paper-section {
+    padding: 2rem;
+    background-color: #131314;
+    color: #7A7D7D;
+    min-height: 100vh;
+  }
+  
+  .semester-question {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #1E1F20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .semester-question:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  }
+  
+  .semester-question h3 {
+    font-size: 1.9rem;
+    color: #8fd8d8;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2c2d2e;
+    padding-bottom: 0.5rem;
+  }
+  
+  .semester-question h4 {
+    font-size: 1.2rem;
+    color: #60ccd2;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .semester-question ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .semester-question li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+    color: #cacdcd;
+  }
+  

@@ -4,7 +4,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #131314;
+    background-color: #101010;
 }
 
 .logo{
@@ -202,6 +202,8 @@ input[type="checkbox"]:checked+.check svg polyline {
 }
 
 /* Semester Buttons */
+
+
 .semester-buttons {
     margin: 20px;
     display: flex;
@@ -236,11 +238,57 @@ input[type="checkbox"]:checked+.check svg polyline {
     cursor: pointer;
     color: wheat;
 }
-
+.semester-name{
+    position: relative;
+}
 .semester-name img:nth-child(2){
     margin-bottom:6px;
 }
 
+.Question-paper {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    float: right;
+  
+    /* Custom Variables  */
+    --border-highlight: 5px;
+    --outline-color: rgba(255, 255, 255, 0.6);
+    --glow-color: #37FF8B;
+    --font-large: 2em;
+  
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--font-large);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.2px var(--outline-color);
+  }
+  
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--glow-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-highlight) solid var(--glow-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--glow-color);
+  }
+  
+  .Question-paper:hover .hover-text {
+    width: 97%;
+    filter: drop-shadow(0 0 25px var(--glow-color));
+  }
+  
 /* Responsive Adjustments */
 
 @media (max-width: 1550px) {
